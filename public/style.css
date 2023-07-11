@@ -1,0 +1,542 @@
+@keyframes ripple1 {
+  0% {
+    transform: scale(5.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(8.5);
+    opacity: 0;
+  }
+}
+@keyframes ripple2 {
+  0% {
+    transform: scale(3.5);
+  }
+  100% {
+    transform: scale(5.5);
+  }
+}
+@keyframes ripple3 {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(3.5);
+  }
+}
+@keyframes anim-effct-slide {
+  0% {
+    box-shadow: 0 0 0 8px #e0e0e0;
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 0 15px hsla(0, 0%, 88%, 0.6);
+    opacity: 1;
+  }
+  to {
+    box-shadow: 0 0 0 25px hsla(0, 0%, 88%, 0);
+    opacity: 0;
+  }
+}
+@keyframes movebounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes moveleftbounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(90deg, #5f57ea 0, #9647db);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Secular One", sans-serif;
+}
+
+.Header {
+  background: linear-gradient(90deg, #5f57ea 0, #9647db);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.Header .Logo {
+  width: 13%;
+}
+.Header .Logo i {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(90deg, #5f57ea 0, #9647db);
+  border-radius: 100%;
+  opacity: 0.5;
+  transform: scale(1.3);
+  animation: ripple1 3s linear infinite;
+  left: 0;
+}
+.Header .Logo i:nth-child(2) {
+  animation: ripple2 3s linear infinite;
+}
+.Header .Logo i:nth-child(3) {
+  animation: ripple3 3s linear infinite;
+}
+.Header .Tabs {
+  width: 35%;
+  margin-right: 218px;
+}
+.Header .Tabs ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Header .Tabs ul a {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-decoration-line: none;
+  font-size: 15px;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 829px;
+}
+.intro .first-div {
+  width: 35%;
+  margin-right: 5%;
+}
+.intro .first-div h1 {
+  line-height: 1.4em;
+  font-size: 42px;
+  color: hsla(0, 0%, 100%, 0.85);
+}
+.intro .first-div h2 {
+  font-size: 42px;
+  color: #fff;
+  font-weight: 600;
+}
+.intro .first-div p {
+  font-size: 18px;
+  color: #cfcaff;
+  font-weight: 400;
+}
+.intro .first-div .buttons a {
+  margin-right: 2%;
+  text-decoration-line: none;
+}
+.intro .Second-div {
+  height: 700px;
+  position: relative;
+}
+.intro .Second-div .p1 {
+  position: absolute;
+  left: -107px;
+  top: -45px;
+}
+.intro .Second-div .p1::before {
+  animation: 2.5s anim-effct-slide 0s linear infinite;
+  box-shadow: 0 0 0 80px hsla(0, 0%, 91%, 0.1);
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 110px;
+  top: 26%;
+  left: 26%;
+  border-radius: 50%;
+  z-index: 0;
+}
+.intro .Second-div .p2 {
+  position: absolute;
+  top: 259px;
+  left: -137px;
+  animation: movebounce 2.1s linear infinite;
+}
+.intro .Second-div .p3 {
+  position: absolute;
+  top: 59%;
+  left: 186px;
+  animation: moveleftbounce 2.1s linear infinite;
+}
+.intro .Second-div .p4 {
+  position: absolute;
+  bottom: 0;
+  left: 53%;
+}
+.intro .Second-div .p4::before {
+  animation: 2.5s anim-effct-slide 0s linear infinite;
+  box-shadow: 0 0 0 80px hsla(0, 0%, 91%, 0.1);
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 110px;
+  top: 26%;
+  left: 26%;
+  border-radius: 50%;
+  z-index: 0;
+}
+.intro .Second-div .p5 {
+  position: absolute;
+  bottom: 79px;
+  left: -50px;
+  animation: moveleftbounce 2.1s linear infinite;
+}
+
+.About {
+  background-color: white;
+  padding-top: 80px;
+}
+.About .first-div {
+  width: 17%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.About .first-div h1 {
+  line-height: 28px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #5f57ea;
+  text-align: center;
+}
+.About .first-div img {
+  margin: 10px 112px;
+}
+.About .second-div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 56%;
+  height: 160px;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.About .second-div .Divs {
+  width: 20%;
+  height: 85px;
+  border-right: 1px solid #ddd;
+}
+.About .second-div .Divs h1 {
+  font-size: 20px;
+  margin-bottom: 0;
+  color: #586082;
+  font-weight: 300;
+}
+.About .second-div .Divs img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.About .third-div {
+  text-align: center;
+  width: 74%;
+  margin: auto;
+  padding-top: 50px;
+}
+.About .third-div h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  color: #586082;
+}
+
+.Features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: -7px;
+  background: linear-gradient(90deg, #5f57ea 0, #9647db);
+}
+.Features .firs-div {
+  width: 15%;
+  margin: auto;
+  color: #fff !important;
+}
+.Features .firs-div img {
+  margin: 10px 56px;
+}
+.Features .second-div {
+  display: flex;
+  justify-content: space-between;
+  width: 56%;
+  margin: auto;
+  padding-top: 60px;
+}
+.Features .second-div .list {
+  border-right: 1px solid hsla(0, 0%, 100%, 0.3);
+  margin: 30px 0 0 0;
+  height: 500px;
+}
+.Features .second-div .list ul {
+  margin: 54px 20px 0 0;
+}
+.Features .second-div .list ul .feas {
+  list-style-type: none;
+  text-align: end;
+  margin-bottom: 70px;
+  line-height: 0;
+}
+.Features .second-div .list ul .feas h4 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 100;
+  padding-top: 20px;
+}
+.Features .second-div .list ul .feas p {
+  color: #fff !important;
+  font-weight: 100;
+}
+.Features .second-div .list ul .feas::before {
+  content: "";
+  background: #9647db;
+  position: relative;
+  height: 7px;
+  width: 7px;
+  right: -28px;
+  background-size: cover;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  float: right;
+  padding: 0;
+  border: 3px solid hsla(0, 0%, 100%, 0.9);
+}
+.Features .second-div .effect {
+  position: relative;
+}
+.Features .second-div .effect i {
+  background: #eee;
+  right: 0;
+  bottom: 275px;
+  left: 124px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  opacity: 0.3;
+  transform: scale(1.3);
+  animation: ripple1 3s linear infinite;
+}
+.Features .second-div .effect i:nth-child(2) {
+  animation: ripple2 3s linear infinite;
+}
+.Features .second-div .effect i:nth-child(3) {
+  animation: ripple3 3s linear infinite;
+}
+.Features .second-div .effect img {
+  position: relative;
+  z-index: 2;
+  height: 600px;
+}
+.Features .second-div .list2 {
+  border-left: 1px solid hsla(0, 0%, 100%, 0.3);
+  margin: 30px 0 0 0;
+  height: 500px;
+}
+.Features .second-div .list2 ul {
+  margin: 54px 20px 0 0;
+}
+.Features .second-div .list2 ul .feas {
+  list-style-type: none;
+  text-align: start;
+  margin-bottom: 70px;
+  line-height: 0;
+}
+.Features .second-div .list2 ul .feas h4 {
+  color: #fff !important;
+  font-size: 20px;
+  font-weight: 100;
+  padding-top: 20px;
+}
+.Features .second-div .list2 ul .feas p {
+  color: #fff !important;
+  font-weight: 100;
+}
+.Features .second-div .list2 ul .feas::before {
+  content: "";
+  background: #9647db;
+  position: relative;
+  height: 7px;
+  width: 7px;
+  left: -371px;
+  background-size: cover;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  float: right;
+  padding: 0;
+  border: 3px solid hsla(0, 0%, 100%, 0.9);
+}
+
+.Working {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
+.Working .First-div {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.Working .First-div h1 {
+  line-height: 28px;
+  font-size: 36px;
+  letter-spacing: 1px;
+  color: #5f57ea;
+}
+.Working .First-div p {
+  color: #586082;
+  font-weight: 100;
+}
+.Working .Second-div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  margin: auto;
+  height: 250px;
+  text-align: center;
+}
+.Working .Second-div .Cardss {
+  box-shadow: 0 1px 5px 3px #f9f9f9;
+  background: #fff;
+  border: 1px solid rgba(89, 96, 130, 0.1);
+  padding: 30px 25px 25px;
+  position: relative;
+  width: 25%;
+}
+.Working .Second-div .Cardss img {
+  height: 60px;
+}
+.Working .Second-div .Cardss h1 {
+  color: #586082;
+  font-size: 24px;
+  font-weight: 100;
+}
+.Working .Second-div .Cardss p {
+  color: #586082;
+  font-weight: 100;
+  font-size: 16px;
+}
+.Working .Second-div .Cardss .img2 {
+  opacity: 0.05;
+  transform: scale(2.5) rotate(15deg);
+  position: absolute;
+  left: 89px;
+  bottom: 60px;
+  transition: all 0.3s ease;
+}
+.Working .Second-div .Cardss:hover .img2 {
+  transform: scale(2.5) rotate(5deg);
+  transition: all 0.3s ease;
+}
+
+.Screenshot {
+  padding-top: 55px;
+  padding-bottom: 35px;
+}
+.Screenshot .first-div {
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Screenshot .first-div h2 {
+  margin-top: 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+.Screenshot .first-div .buttons {
+  width: 24%;
+}
+.Screenshot .first-div .buttons img {
+  height: 40px;
+  margin-right: 13px;
+}
+
+.Footer {
+  background: white;
+  padding-top: 40px;
+}
+.Footer .elements {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+.Footer .elements .First-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Footer .elements .First-div h1 {
+  line-height: 28px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #5f57ea;
+}
+.Footer .elements .First-div input, .Footer .elements .First-div textarea {
+  height: 45px;
+  padding: 10px 52px;
+  position: relative;
+  transition: all 0.3s ease 0s;
+  border: 1px solid #ced4da;
+}
+.Footer .elements .First-div button {
+  background: linear-gradient(90deg, #5f57ea 0, #9647db);
+  color: #fff !important;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  border: 0;
+  letter-spacing: 1px;
+}
+.Footer .elements .Second-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Footer .elements .Second-div h1 {
+  line-height: 28px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #5f57ea;
+}
+.Footer .elements .Second-div p {
+  line-height: 23px;
+  font-size: 16px;
+  letter-spacing: 0.05rem;
+  color: #586082;
+}
+.Footer .elements .Second-div .Loc h2 {
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  color: #586082;
+}
+.Footer .elements .Second-div .Loc p {
+  color: #586082;
+}/*# sourceMappingURL=style.css.map */

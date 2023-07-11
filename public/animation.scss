@@ -1,0 +1,110 @@
+@mixin child1{
+    animation: ripple1 3s linear infinite;
+}
+@keyframes ripple1 {
+    0% {
+        transform: scale(5.5);
+        opacity: .3;
+    }
+    100% {
+        transform: scale(8.5);
+        opacity: 0;
+    }
+  }
+
+@mixin child2{
+    animation: ripple2 3s linear infinite;
+}
+@keyframes ripple2 {
+    0% {
+        transform: scale(3.5);
+    }
+    100% {
+        transform: scale(5.5);
+    }
+  }
+
+@mixin child3{
+    animation: ripple3 3s linear infinite;
+}
+@keyframes ripple3 {
+    0% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(3.5);
+    }
+  }
+
+
+
+
+
+@mixin p1 {
+    animation: 2.5s anim-effct-slide 0s linear infinite;
+    box-shadow: 0 0 0 80px hsla(0,0%,91%,.1);
+    position: absolute;
+    content: "";
+    width: 110px;
+    height: 110px;
+    top: 26%;
+    left: 26%;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+@keyframes anim-effct-slide {
+    0% {
+        box-shadow: 0 0 0 8px #e0e0e0;
+        opacity: 1
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px hsla(0,0%,88%,.6);
+        opacity: 1
+    }
+
+    to {
+        box-shadow: 0 0 0 25px hsla(0,0%,88%,0);
+        opacity: 0
+    }
+}
+
+
+@mixin p2{
+    animation: movebounce 2.1s linear infinite ;
+}
+
+@keyframes movebounce {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(8px)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+
+@mixin p3{
+    animation: moveleftbounce 2.1s linear infinite;
+
+}
+@keyframes moveleftbounce {
+    0% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(8px)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
